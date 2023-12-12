@@ -1,0 +1,231 @@
+
+
+================================================================
+== Vivado HLS Report for 'relu_array_ap_fixed_8u_array_ap_fixed_20_8_5_3_0_8u_relu_config21_s'
+================================================================
+* Date:           Thu Dec 12 22:34:52 2019
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 3.148 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        2|        2| 10.000 ns | 10.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    314|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    162|    -|
+|Register         |        -|      -|     325|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     325|    476|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |io_acc_block_signal_op4           |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op48          |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln1494_1_fu_151_p2           |   icmp   |      0|  0|  18|          20|           1|
+    |icmp_ln1494_2_fu_156_p2           |   icmp   |      0|  0|  18|          20|           1|
+    |icmp_ln1494_3_fu_161_p2           |   icmp   |      0|  0|  18|          20|           1|
+    |icmp_ln1494_4_fu_166_p2           |   icmp   |      0|  0|  18|          20|           1|
+    |icmp_ln1494_5_fu_171_p2           |   icmp   |      0|  0|  18|          20|           1|
+    |icmp_ln1494_6_fu_176_p2           |   icmp   |      0|  0|  18|          20|           1|
+    |icmp_ln1494_7_fu_181_p2           |   icmp   |      0|  0|  18|          20|           1|
+    |icmp_ln1494_fu_146_p2             |   icmp   |      0|  0|  18|          20|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |    or    |      0|  0|   2|           1|           1|
+    |tmp_data_0_V_fu_186_p3            |  select  |      0|  0|  20|           1|          20|
+    |tmp_data_1_V_fu_193_p3            |  select  |      0|  0|  20|           1|          20|
+    |tmp_data_2_V_fu_200_p3            |  select  |      0|  0|  20|           1|          20|
+    |tmp_data_3_V_fu_207_p3            |  select  |      0|  0|  20|           1|          20|
+    |tmp_data_4_V_fu_214_p3            |  select  |      0|  0|  20|           1|          20|
+    |tmp_data_5_V_fu_221_p3            |  select  |      0|  0|  20|           1|          20|
+    |tmp_data_6_V_fu_228_p3            |  select  |      0|  0|  20|           1|          20|
+    |tmp_data_7_V_fu_235_p3            |  select  |      0|  0|  20|           1|          20|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 314|         173|         174|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_done                |   9|          2|    1|          2|
+    |data_V_data_0_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_1_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_2_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_3_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_4_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_5_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_6_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_7_V_blk_n  |   9|          2|    1|          2|
+    |real_start             |   9|          2|    1|          2|
+    |res_V_data_0_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_1_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_2_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_3_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_4_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_5_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_6_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_7_V_blk_n   |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 162|         36|   18|         36|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |start_once_reg           |   1|   0|    1|          0|
+    |tmp_data_0_V_reg_290     |  20|   0|   20|          0|
+    |tmp_data_1_V_reg_295     |  20|   0|   20|          0|
+    |tmp_data_2_V_reg_300     |  20|   0|   20|          0|
+    |tmp_data_3_V_reg_305     |  20|   0|   20|          0|
+    |tmp_data_4_V_reg_310     |  20|   0|   20|          0|
+    |tmp_data_5_V_reg_315     |  20|   0|   20|          0|
+    |tmp_data_6_V_reg_320     |  20|   0|   20|          0|
+    |tmp_data_7_V_reg_325     |  20|   0|   20|          0|
+    |tmp_data_V_0_reg_242     |  20|   0|   20|          0|
+    |tmp_data_V_1_reg_248     |  20|   0|   20|          0|
+    |tmp_data_V_216_reg_254   |  20|   0|   20|          0|
+    |tmp_data_V_3_reg_260     |  20|   0|   20|          0|
+    |tmp_data_V_4_reg_266     |  20|   0|   20|          0|
+    |tmp_data_V_5_reg_272     |  20|   0|   20|          0|
+    |tmp_data_V_6_reg_278     |  20|   0|   20|          0|
+    |tmp_data_V_7_reg_284     |  20|   0|   20|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 325|   0|  325|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------------------------------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |                             Source Object                             |    C Type    |
++-------------------------+-----+-----+------------+-----------------------------------------------------------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|start_full_n             |  in |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|ap_continue              |  in |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|start_out                | out |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|start_write              | out |    1| ap_ctrl_hs | relu<array<ap_fixed,8u>,array<ap_fixed<20,8,5,3,0>,8u>,relu_config21> | return value |
+|data_V_data_0_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_0_V                            |    pointer   |
+|data_V_data_0_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_0_V                            |    pointer   |
+|data_V_data_0_V_read     | out |    1|   ap_fifo  |                            data_V_data_0_V                            |    pointer   |
+|data_V_data_1_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_1_V                            |    pointer   |
+|data_V_data_1_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_1_V                            |    pointer   |
+|data_V_data_1_V_read     | out |    1|   ap_fifo  |                            data_V_data_1_V                            |    pointer   |
+|data_V_data_2_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_2_V                            |    pointer   |
+|data_V_data_2_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_2_V                            |    pointer   |
+|data_V_data_2_V_read     | out |    1|   ap_fifo  |                            data_V_data_2_V                            |    pointer   |
+|data_V_data_3_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_3_V                            |    pointer   |
+|data_V_data_3_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_3_V                            |    pointer   |
+|data_V_data_3_V_read     | out |    1|   ap_fifo  |                            data_V_data_3_V                            |    pointer   |
+|data_V_data_4_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_4_V                            |    pointer   |
+|data_V_data_4_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_4_V                            |    pointer   |
+|data_V_data_4_V_read     | out |    1|   ap_fifo  |                            data_V_data_4_V                            |    pointer   |
+|data_V_data_5_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_5_V                            |    pointer   |
+|data_V_data_5_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_5_V                            |    pointer   |
+|data_V_data_5_V_read     | out |    1|   ap_fifo  |                            data_V_data_5_V                            |    pointer   |
+|data_V_data_6_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_6_V                            |    pointer   |
+|data_V_data_6_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_6_V                            |    pointer   |
+|data_V_data_6_V_read     | out |    1|   ap_fifo  |                            data_V_data_6_V                            |    pointer   |
+|data_V_data_7_V_dout     |  in |   20|   ap_fifo  |                            data_V_data_7_V                            |    pointer   |
+|data_V_data_7_V_empty_n  |  in |    1|   ap_fifo  |                            data_V_data_7_V                            |    pointer   |
+|data_V_data_7_V_read     | out |    1|   ap_fifo  |                            data_V_data_7_V                            |    pointer   |
+|res_V_data_0_V_din       | out |   20|   ap_fifo  |                             res_V_data_0_V                            |    pointer   |
+|res_V_data_0_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_0_V                            |    pointer   |
+|res_V_data_0_V_write     | out |    1|   ap_fifo  |                             res_V_data_0_V                            |    pointer   |
+|res_V_data_1_V_din       | out |   20|   ap_fifo  |                             res_V_data_1_V                            |    pointer   |
+|res_V_data_1_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_1_V                            |    pointer   |
+|res_V_data_1_V_write     | out |    1|   ap_fifo  |                             res_V_data_1_V                            |    pointer   |
+|res_V_data_2_V_din       | out |   20|   ap_fifo  |                             res_V_data_2_V                            |    pointer   |
+|res_V_data_2_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_2_V                            |    pointer   |
+|res_V_data_2_V_write     | out |    1|   ap_fifo  |                             res_V_data_2_V                            |    pointer   |
+|res_V_data_3_V_din       | out |   20|   ap_fifo  |                             res_V_data_3_V                            |    pointer   |
+|res_V_data_3_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_3_V                            |    pointer   |
+|res_V_data_3_V_write     | out |    1|   ap_fifo  |                             res_V_data_3_V                            |    pointer   |
+|res_V_data_4_V_din       | out |   20|   ap_fifo  |                             res_V_data_4_V                            |    pointer   |
+|res_V_data_4_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_4_V                            |    pointer   |
+|res_V_data_4_V_write     | out |    1|   ap_fifo  |                             res_V_data_4_V                            |    pointer   |
+|res_V_data_5_V_din       | out |   20|   ap_fifo  |                             res_V_data_5_V                            |    pointer   |
+|res_V_data_5_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_5_V                            |    pointer   |
+|res_V_data_5_V_write     | out |    1|   ap_fifo  |                             res_V_data_5_V                            |    pointer   |
+|res_V_data_6_V_din       | out |   20|   ap_fifo  |                             res_V_data_6_V                            |    pointer   |
+|res_V_data_6_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_6_V                            |    pointer   |
+|res_V_data_6_V_write     | out |    1|   ap_fifo  |                             res_V_data_6_V                            |    pointer   |
+|res_V_data_7_V_din       | out |   20|   ap_fifo  |                             res_V_data_7_V                            |    pointer   |
+|res_V_data_7_V_full_n    |  in |    1|   ap_fifo  |                             res_V_data_7_V                            |    pointer   |
+|res_V_data_7_V_write     | out |    1|   ap_fifo  |                             res_V_data_7_V                            |    pointer   |
++-------------------------+-----+-----+------------+-----------------------------------------------------------------------+--------------+
+

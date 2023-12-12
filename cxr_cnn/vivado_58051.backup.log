@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Dec 12 22:30:44 2019
+# Process ID: 58051
+# Current directory: /home/prabhav/CXR-FPGA-INF/cxr_cnn
+# Command line: vivado -mode batch -source design.tcl
+# Log file: /home/prabhav/CXR-FPGA-INF/cxr_cnn/vivado.log
+# Journal file: /home/prabhav/CXR-FPGA-INF/cxr_cnn/vivado.jou
+#-----------------------------------------------------------
+source design.tcl
+# set tcldir [file dirname [info script]]
+# source [file join $tcldir project.tcl]
+## variable project_name
+## set project_name "myproject"
+## variable backend
+## set backend "vivadoaccelerator"
+## variable part
+## set part "xc7z020clg400-1"
+## variable clock_period
+## set clock_period 5
+## variable clock_uncertainty
+## set clock_uncertainty 12.5%
+## set bit_width_hls_output 32
+## set bit_width_hls_input 32
+# create_project project_1 ${project_name}_vivado_accelerator -part xc7z020clg400-1 -force
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 12 22:30:50 2019...

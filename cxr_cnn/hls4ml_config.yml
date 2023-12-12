@@ -1,0 +1,164 @@
+AcceleratorConfig:
+  Board: pynq-z2
+  Driver: python
+  Interface: axi_stream
+  Precision:
+    Input: float
+    Output: float
+Backend: VivadoAccelerator
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    bn_conv_0:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    bn_conv_1:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    bn_conv_2:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    bn_dense_0:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    bn_dense_1:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_0:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_0_linear:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_1:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_1_linear:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_2:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_2_linear:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_act_0:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_act_1:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    conv_act_2:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    dense_0:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    dense_0_linear:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    dense_1:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    dense_1_linear:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    dense_act_0:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    dense_act_1:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    flatten_32:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    input_33:
+      Precision: ap_uint<8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    output_dense:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    output_dense_linear:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    output_softmax:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: Stable
+      Trace: false
+    pool_0:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    pool_1:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+    pool_2:
+      Precision: ap_fixed<20,8>
+      ReuseFactor: 64
+      Strategy: latency
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: ap_fixed<20,8>
+    ReuseFactor: 64
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_stream
+KerasModel: !keras_model './cxr_cnn//keras_model.h5'
+OutputDir: ./cxr_cnn/
+Part: xc7z020clg400-1
+ProjectName: myproject
+Stamp: bB9AA07B
+board: pynq-z2
